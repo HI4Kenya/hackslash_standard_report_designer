@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import Header from "./ui/Header";
-import Charts from 'react-charts';
+import Header from "./ui/Header";        
 import { ListGroup, ListGroupItem } from "reactstrap";
 //import ReactDOM from "react-dom";
 //import { Link } from 'react-router';
@@ -14,37 +13,36 @@ import {
 } from "react-router-dom";
 //import { Redirect } from 'react-router-dom'
 //import App from "./App";
-//import Report from "./components/Report";
+//import Report from "./components/Re                                                                                                                                                                                                                                                                         port";
 
 import {
   Card,
-  Button, 
+  Button,                                                                          
   CardHeader, 
-  CardText  
+  CardText ,
+  Form, FormGroup
 } from "reactstrap";
+import { Row, Col } from 'react-bootstrap';
+import { Line } from 'react-chartjs-2';
 
 
-// <Router>
-//   <Route path="/components/report" component={Report} />
-// </Router>
+//Charts data
+var data = {
+  labels: ["January", "February", "March", "April", "May", "June", "July"],
+  datasets: [{
+    label: "Measles",
+    borderColor: 'rgb(255, 99, 132)',
+    data: [4, 14, 12, 2, 1, 5, 13],
+  },
+  {
+    label: "Rubella",
+    borderColor: '#0000FF',
+    data: [3, 10, 5, 2, 20, 16, 10],
+  }]
+}
+//end charts data
 class Visualizer extends Component {
-  // state = {
-  //   redirect: false
-  // };
 
-  // setRedirect = () => {
-  //   this.setState({
-  //     redirect: true
-  //   });
-  // };
-
-  // renderRedirect = () => {
-  //   if (this.state.redirect) {
-  //     return <Redirect to="/report" />;
-  //   }
-  // };
-
-  
   render() {
     return (      
         <div className="container-fluid">
@@ -58,13 +56,45 @@ class Visualizer extends Component {
                 <CardHeader>Selected report attributes</CardHeader>
               </Card>
             </div>
+
+            {/* return chart */}
             <div className="col-md-9">
               <br />
-              <Card color="primary">
+              <Card>
                 <CardHeader>data Visualizer Customize</CardHeader>
-                <CardText>
+                <div className="col-10" id="chart_section">
+            <Form>
+          <FormGroup>
+              <Row>
+                  <Col md={5}>
+                  <select class="selectpicker form-control input-place"  name="select_option" id="disease" onChange="setCode(this)" required>
+                  {/* multiple data-live-search="true" */}
+                  <option value="">Select Region</option>
+                  <option value="44">Central</option>
+                  <option value="55">Coast</option>
+                  <option value="33">Eastern</option>
+                  <option value="22">Nairobi</option>
+                  <option value="11">N/Eastern</option>
+                  <option value="32">Nyanza</option>
+                  <option value="34">Western</option>
+                  </select>
+                  </Col>
+                  <Col md={5}>
+                  <select class="form-control" id="county">
+                  <option>Select County</option>
+                  </select>
+                  </Col>
+                  <Col md={2}>
+                  <Button>Generate Chart</Button>
+                  </Col>
                   
-                </CardText>
+              </Row>
+              
+          </FormGroup>
+          
+      </Form>
+          <Line data={data} className="fullsize" />
+        </div>
               </Card>
              <Router>
              

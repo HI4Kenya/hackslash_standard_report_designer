@@ -4,6 +4,7 @@ import ReportItems from './ui/ReportItems';
 import { ListGroup, ListGroupItem } from "reactstrap";
 //import ReactDOM from "react-dom";
 //import { Link } from 'react-router';
+import SideBar from './SideBar';
 import { Link } from 'react-router-dom'
 import App from "./App";
 import {
@@ -35,7 +36,7 @@ class Report extends Component{
 
 <br/>
             {/*  The application Sidebar*/}
-            <ReportItems />
+            <SideBar/>
 
             {/* End Of Sidebar */}
 

@@ -16,14 +16,7 @@ import {
 //import App from "./App";
 import Report from "./Report";
 
-import {
-  Card,
-  Button, 
-  CardHeader, 
-  CardText  
-} from "reactstrap";
-
-
+import { Card, Button, CardHeader, CardText } from "reactstrap";
 
 class Dashboard extends Component {
   // state = {
@@ -42,42 +35,39 @@ class Dashboard extends Component {
   //   }
   // };
 
-  
   render() {
-    return (      
-        <div className="container-fluid">
-          <br />
-          <Header />
+    return (
+      <div className="container-fluid">
+        <br />
+        <Header />
 
-          <div className="row">
-            <div className="col-md-3">
-              <br />
-              <Card>
-                <CardHeader>Selected report attributes</CardHeader>
-              </Card>
-            </div>
-            <div className="col-md-9">
-              <br />
-              <Card color="primary">
-                <CardHeader>This is my Home Interface</CardHeader>
-                <CardText>
-                  <ListGroup>
-                    <ListGroupItem>ANC 4th visit Report </ListGroupItem>
-                    <ListGroupItem>
-                      Ruiru Healthcare Malaria Report
-                    </ListGroupItem>
-                  </ListGroup>
-                </CardText>
-              </Card>
-           
-             
-              <Link to="/report"><Button color="primary" className="float-right">New</Button></Link>
-             
-             
-            </div>
+        <div className="row">
+          <div className="col-md-3">
+            <br />
+            <Card>
+              <CardHeader>Selected report attributes</CardHeader>
+            </Card>
+          </div>
+          <div className="col-md-9">
+            <br />
+            <Card color="primary">
+              <CardHeader>This is my Home Interface</CardHeader>
+              <CardText>
+                <ListGroup>
+                  <ListGroupItem>ANC 4th visit Report </ListGroupItem>
+                  <ListGroupItem>Ruiru Healthcare Malaria Report</ListGroupItem>
+                </ListGroup>
+              </CardText>
+            </Card>
+
+            <Link to="/report">
+              <Button color="primary" className="float-right">
+                New
+              </Button>
+            </Link>
           </div>
         </div>
-    
+      </div>
     );
   }
 }

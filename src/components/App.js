@@ -5,6 +5,8 @@ import "../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { EditorState, convertFromRaw, convertToRaw } from "draft-js";
 import Header from "./ui/Header";
 import Sidebar from "./ui/Sidebar";
+import Visualizer from './Visualizer';
+import {Link } from 'react-router-dom';
 //import 'webpack';
 import {
   Card,
@@ -109,6 +111,7 @@ class App extends Component {
                 /> */}
             </div>
           </div>
+          <Link to="/Visualizer"><Button color="primary" className="float-right">Charts</Button></Link>
         </div>
       </div>
     );
