@@ -1,0 +1,20 @@
+[
+    {"id": 1, "name": "Westlands"},
+    {"id": 2, "name": "Dagoretti North"},
+    {"id": 3, "name": "Dagoretti South"},
+    {"id": 4, "name": "Langata"},
+    {"id": 5, "name": "Kibra"},
+    {"id": 6, "name": "Roysambu"},
+    {"id": 7, "name": "Kasarani"},
+    {"id": 8, "name": "Ruaraka"},
+    {"id": 9, "name": "Embakasi South"},
+    {"id": 10, "name": "Embakasi North"},
+    {"id": 11, "name": "Embakasi Central"},
+    {"id": 12, "name": "Embakasi East"},
+    {"id": 13, "name": "Embakasi West"},
+    {"id": 14, "name": "Makadara"},
+    {"id": 15, "name": "Kamukunji"},
+    {"id": 16, "name": "Starehe"},
+    {"id": 17, "name": "Mathare"}  
+  ]
+  
